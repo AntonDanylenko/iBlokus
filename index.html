@@ -1,0 +1,68 @@
+<!-- Anton Danylenko -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="static/css/main.css">
+    <link rel="shortcut icon" href="static/img/favicon.ico">
+    <title>iBlokus</title>
+  </head>
+  <body onload="newGame();">
+    <header>iBlokus</header>
+    <div class="navbar">
+      <div id="settings">
+        <a href="" onclick="return false;">
+          <img src="static/img/pause.svg" alt="Pause" onclick="return false;"> <!--checkPause()-->
+        </a>
+        <div id="utensils">
+          <a class="active" id="rotate" href="" onclick="return false;">
+            <img src="static/img/rotate.png" alt="Rotate" onclick="return false;">
+          </a>
+          <a id="flip" href="" onclick="return false;">
+            <img src="static/img/F.png" alt="Flip" onclick="return false;">
+          </a>
+          <a id="place" href="" onclick="return false;">
+            <img src="static/img/check.svg" alt="Place" onclick="return false;">
+          </a>
+        </div>
+      </div>
+      <div id="squares_left">
+        89
+      </div>
+      <div id="player">
+        Blue
+      </div>
+    </div>
+    <div class="board" id="board">
+      <svg id="mySvg" width="600" height="600">
+        <image id="blokus_board" href="static/img/blokus_board.png"></image>
+      </svg>
+    </div>
+    <div class="pauseMenu">
+      <h1>Game Paused</h1>
+      <p>Press the pause button again to resume the game</p>
+      <p>Select a piece</p>
+      <p>Press the rotate button to rotate selected piece 90 degrees counterclockwise</p>
+      <p>Press the F button to flip selected piece</p>
+      <p>Press the check button to confirm piece placement</p>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <p>You can press ESC key to pause and unpause</p>
+      <p>You can press R key to rotate</p>
+      <p>You can press F to flip</p>
+      <p>You can press ENTER to confirm</p>
+    </div>
+
+    <div id="winAlert" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <center>
+          <h2 id="heading">YOU WON!!!</h2>
+          <br>
+          <button id="newGame" onclick="newGame();">NEW GAME</button>
+        </center>
+      </div>
+    </div>
+    <script src="static/js/game.js"></script>
+    <script src="static/js/blokus.js"></script>
+  </body>
+</html>
